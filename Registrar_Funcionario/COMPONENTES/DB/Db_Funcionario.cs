@@ -38,7 +38,7 @@ namespace Registrar_Funcionario.COMPONENTES.DB
         {
             var lista = new List<Funcionario>();
 
-            using var conn = new SqlConnection(_connectionString);
+            using var conn = new SqlConnection(_connectionString);s
             using var cmd = new SqlCommand("sp_Funcionario_Listar", conn);
 
             cmd.CommandType = CommandType.StoredProcedure;
