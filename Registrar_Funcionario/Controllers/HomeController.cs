@@ -1,25 +1,30 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Registrar_Funcionario.COMPONENTES.BUS;
 using Registrar_Funcionario.Models;
 
-namespace Registrar_Funcionario.Controllers
+public class HomeController : Controller
 {
-    public class HomeController : Controller
+    private readonly Bus_Funcionario _bus;
+
+    public HomeController(Bus_Funcionario bus)
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        _bus = bus;
+    }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+    [HttpPost]
+    public IActionResult Index(Funcionario funcionario)
+    {
+        if (!ModelState.IsValid)
+            return View(funcionario);
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        _bus.Cadastrar(funcionario);
+
+        TempData["Mensagem"] = "Funcionário cadastrado com sucesso!";
+        return RedirectToAction("Index");
+    }
+
+    public IActionResult Lista()
+    {
+        return View(_bus.Listar());
     }
 }
