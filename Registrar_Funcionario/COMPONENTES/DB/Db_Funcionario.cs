@@ -44,7 +44,7 @@ namespace Registrar_Funcionario.COMPONENTES.DB
             cmd.CommandType = CommandType.StoredProcedure;
             conn.Open();
 
-            using var reader = cmd.ExecuteReader();
+            using var reader = cmd.ExecuteReader();ddd
             while (reader.Read())
             {
                 lista.Add(new Funcionario
