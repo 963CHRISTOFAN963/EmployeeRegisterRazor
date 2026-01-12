@@ -33,7 +33,7 @@ namespace Registrar_Funcionario.COMPONENTES.DB
             cmd.ExecuteNonQuery();
         }
 
-        // READ
+        // READsss
         internal List<Funcionario> Listar()
         {
             var lista = new List<Funcionario>();
