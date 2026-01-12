@@ -36,7 +36,7 @@ namespace Registrar_Funcionario.COMPONENTES.DB
         // READsss
         internal List<Funcionario> Listar()
         {
-            var lista = new List<Funcionario>();
+            var lista = new List<Funcionario>();sssssss
 
             using var conn = new SqlConnection(_connectionString);s
             using var cmd = new SqlCommand("sp_Funcionario_Listar", conn);
