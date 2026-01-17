@@ -33,18 +33,18 @@ namespace Registrar_Funcionario.COMPONENTES.DB
             cmd.ExecuteNonQuery();
         }
 
-        // READsss
+
         internal List<Funcionario> Listar()
         {
-            var lista = new List<Funcionario>();sssssss vcdcdssss
+            var lista = new List<Funcionario>();
 
-            using var conn = new SqlConnection(_connectionString);s
+            using var conn = new SqlConnection(_connectionString);
             using var cmd = new SqlCommand("sp_Funcionario_Listar", conn);
 
             cmd.CommandType = CommandType.StoredProcedure;
             conn.Open();
 
-            using var reader = cmd.ExecuteReader();dddcccccsssssas
+            using var reader = cmd.ExecuteReader();
             while (reader.Read())
             {
                 lista.Add(new Funcionario
