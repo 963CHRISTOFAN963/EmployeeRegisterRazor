@@ -29,5 +29,15 @@ namespace Registrar_Funcionario.COMPONENTES.BUS
         {
             return _db.Listar();
         }
+
+
+
+
+
+
+        //public List<carro> listar()
+        //{
+        //    retunrn _db.Listarcar()
+        //}
     }
 }
