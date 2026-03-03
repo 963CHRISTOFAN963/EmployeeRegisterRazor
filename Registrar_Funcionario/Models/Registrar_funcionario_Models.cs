@@ -24,6 +24,6 @@ namespace Registrar_Funcionario.Models
 
         public string Situacao { get; set; }
 
-        public string N_pis     
+        public string N_pis { get; set; }
     }
 }
