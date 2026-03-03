@@ -12,7 +12,7 @@ namespace Registrar_Funcionario.Models
         [EmailAddress(ErrorMessage = "E-mail inválido")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "CPF é obrigatório")]
+        [Required(ErrorMessage = "CPF é obrigatóriooo")]
         public string Cpf { get; set; }
 
         public string Cargo { get; set; }
@@ -23,5 +23,7 @@ namespace Registrar_Funcionario.Models
         public decimal Salario { get; set; }
 
         public string Situacao { get; set; }
+
+        public string N_pis     
     }
 }
