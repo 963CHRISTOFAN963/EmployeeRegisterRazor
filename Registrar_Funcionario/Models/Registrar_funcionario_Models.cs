@@ -17,7 +17,7 @@ namespace Registrar_Funcionario.Models
 
         public string Cargo { get; set; }
 
-        public DateTime? DataAdmissao { get; set; }
+        public DateTime DataAdmissao { get; set; }
 
         [Range(0, double.MaxValue, ErrorMessage = "Salário inválido")]
         public decimal Salario { get; set; }
